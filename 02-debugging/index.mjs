@@ -10,6 +10,12 @@ function netSalary({ discount, salary }) {
 
 http.createServer((req, res) => {
 
-    res.end('hello world')
+    const url = req.url.replace('/', '')
+    const params = new URLSearchParams(url)
+    const data = Object.fromEntries(params)
+
+    const result = netSalary(data)
+
+    res.end(`O seu salário final é ${result}`)
     
 }).listen(3000, () => console.log('app running at 3000'))
