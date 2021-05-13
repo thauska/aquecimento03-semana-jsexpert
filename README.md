@@ -66,10 +66,12 @@ curl "localhost:3000/?salary=2000&discount=15"
 ```
 
 ---
----
 
 ### Para debugging no navegador
 
 ```bash
 node --inspect-brk index.mjs
 ```
+---
+## 03 - RegEx: 5 dicas incríveis sobre expressões regulares
+
